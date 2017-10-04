@@ -23,6 +23,29 @@ import random
 def lucky_numbers(n):
     """Return n unique random numbers from 1-10 (inclusive)."""
 
+    # use while loop to loop for n number of unique random integers
+    # while n > 0:
+    # find random integer 1-10
+    # check if random integer is in generated integer set
+    # if not, add random integer to integer list
+    # add the random integer to geberated ubteger set
+    # decrement n by 1
+
+    import random
+
+    generated_integers = set()
+    final_integers = []
+
+    while n > 0:
+        random_int = random.randint(1, 11)
+        if random_int in generated_integers:
+            random_int = random.randint(1, 11)
+        else:
+            generated_integers.add(random_int)
+            final_integers.append(random_int)
+
+    return final_integers
+
 
 if __name__ == '__main__':
     import doctest
