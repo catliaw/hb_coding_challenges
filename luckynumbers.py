@@ -31,7 +31,9 @@ def lucky_numbers(n):
     # add the random integer to geberated ubteger set
     # decrement n by 1
 
-    import random
+    # already imported outside of function
+    # import random
+
 
     generated_integers = set()
     final_integers = []
@@ -46,6 +48,28 @@ def lucky_numbers(n):
             n = n - 1
 
     return final_integers
+
+### Hackbright Solution: ###
+### This solution is less frills.
+### No need to generate random integer.
+### Just randomly choose from list of ints 1-10
+### then remove the choice from the list
+### Using for - range(n) removes risk of infinite loop (which I experienced).
+
+# def lucky_numbers(n):
+#     """Return n unique random numbers from 1-10 (inclusive)."""
+
+#     # START SOLUTION
+
+#     nums = range(1, 11)
+#     lucky_nums = []
+
+#     for i in range(n):
+#         num = random.choice(nums)
+#         nums.remove(num)
+#         lucky_nums.append(num)
+
+#     return lucky_nums
 
 
 if __name__ == '__main__':
