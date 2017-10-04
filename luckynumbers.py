@@ -37,9 +37,9 @@ def lucky_numbers(n):
     final_integers = []
 
     while n > 0:
-        random_int = random.randint(1, 11)
+        random_int = random.randint(1, 10)
         if random_int in generated_integers:
-            random_int = random.randint(1, 11)
+            random_int = random.randint(1, 10)
         else:
             generated_integers.add(random_int)
             final_integers.append(random_int)
