@@ -80,6 +80,35 @@ def days_in_month(date):
         else:
             return 28
 
+## Solution looks for month == 2 first, and uses if is_leap_year(year): 
+## in a statement to find True or False, without extra line of code and 
+## extra assignment
+## Solution also uses set of months, instead of list. This would be good to
+## decrease chance of repeated month number.
+
+# def days_in_month(date):
+#     """How many days are there in a month?"""
+
+#     # START SOLUTION
+
+#     month, year = date.split()
+#     month = int(month)
+#     year = int(year)
+
+#     # Account for February
+
+#     if month == 2:
+#         if is_leap_year(year):
+#             return 29
+#         else:
+#             return 28
+
+#     if month in {1, 3, 5, 7, 8, 10, 12}:
+#         return 31
+
+#     if month in {4, 6, 9, 11}:
+#         return 30
+
 
 if __name__ == '__main__':
     import doctest
