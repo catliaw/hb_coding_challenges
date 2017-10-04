@@ -21,6 +21,12 @@ It should work if either list is empty::
 def concat_lists(list1, list2):
     """Combine lists."""
 
+    # can create new list that is first list, then loop through 2nd list
+    # and append on each item in 2nd list,
+    # but can just combine using the + operator, which combines sequences
+
+    return list1 + list2
+
 
 if __name__ == '__main__':
     import doctest

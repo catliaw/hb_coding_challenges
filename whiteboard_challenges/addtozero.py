@@ -28,8 +28,9 @@ def add_to_zero(nums):
     # if - or + of integer in list, then True
 
     for num in nums:
-        if num == 0:
-            return True
+        # don't need this. redundant because -0 is 0.
+        # if num == 0:
+        #     return True
 
         if -num in nums:
             return True
