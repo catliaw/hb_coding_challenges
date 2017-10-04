@@ -43,6 +43,7 @@ def lucky_numbers(n):
         else:
             generated_integers.add(random_int)
             final_integers.append(random_int)
+            n = n - 1
 
     return final_integers
 
